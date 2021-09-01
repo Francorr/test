@@ -12,6 +12,9 @@ public class Init {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		context.register(BeanConfig.class);
 		context.refresh();
+		
+		
+		
 		Persona persona = (Persona) context.getBean("persona");
 		System.out.println(persona.getNome() + " " + persona.getCognome());
 	}
